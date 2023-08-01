@@ -1,0 +1,1337 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Heebo", sans-serif;
+}
+
+body {
+background-color: #2c3e50;
+color: #eeeeee;
+background: linear-gradient(rgba(15, 23, 43, 0.8), rgba(15, 23, 43, 0.8)),  url(../img/bg-img.jpg);
+background-position: center center;
+background-repeat: repeat;
+background-size: cover;
+background-attachment: fixed;
+width: 100%;
+height: 100vh;
+padding: 1px;
+background-color: #13202d;
+
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+  
+}
+
+a:visited{
+  color: #eeeeee;
+}
+
+.flex-box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.fixed-width {
+  max-width: 1400px;
+  margin: 0 auto;
+ 
+}
+
+.mr-btm {
+  margin-bottom: 20px;
+}
+
+/*----------------- header starts here -----------*/
+
+header {
+  width: 100%;
+  padding: 5px 0;
+  margin-bottom: 50px;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  background-color: #2c3e50;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 25%);
+  background-color: #13202d;
+ 
+}
+
+header nav {
+  line-height: 50px;
+  position: relative;
+ 
+}
+
+header nav .logo {
+  width: 20%;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #eeeeee;
+  transition: all 0.3s ease-in;
+  
+}
+header nav .logo:hover {
+  color: #00b87b;
+}
+
+header nav .logo span {
+  color: #00b87b;
+}
+
+header nav ul {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+header nav ul li {
+  margin-left: 5%;
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #eeeeee;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 600;
+  position: relative;
+
+}
+
+
+header nav ul li a::after{
+  content: "";
+  position: absolute;
+  bottom:-2px;
+  left: 0;
+  width:0%;
+  height: 2px;
+  background-color: #00b87b;
+  transition: all 0.3s ease; 
+
+}
+
+header nav ul li a:hover::after{ 
+  width: 100%; 
+}
+
+header nav ul li a:hover {
+  color: #00b87b;
+
+}
+
+header nav ul li .active-links {
+  color: #00b87b; 
+}
+
+
+
+header nav .nav-icon{
+  display: none;
+} 
+
+.nav-icon  .menu {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+  margin-top: 5px;
+ 
+}
+
+.line {
+  fill: none;
+  stroke: #eeeeee;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+ul {
+  transition: all 0.3s ease;
+  
+}
+
+.active {
+  left: -76px;
+}
+
+/*----------------- header ends here -----------*/ 
+
+
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 120px;
+}
+
+/*------ left box stars here -------*/
+
+.container .leftfixed {
+  position: fixed;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 50%);
+  text-align: center;
+  max-width: 300px;
+  padding-bottom: 1.2rem;
+  background-color: #13202d;
+
+}
+
+.container .leftfixed .img-areas {
+  width: 100%; 
+}
+
+.container .leftfixed .img-areas figure {
+  height: 100%;
+}
+
+.container .leftfixed .img-areas figure img {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 200px;
+  margin-top: 90px;
+  border: 5px solid #00b87b;  
+  position: relative;
+}
+
+
+.container .leftfixed .img-areas figure img::after{ 
+  content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0; 
+  background-color: #00b87b;
+  display: inline-block;
+
+  border: 5px solid #eee; 
+}
+
+
+
+.container .leftfixed .social-icon {
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.container .leftfixed .social-icon h2 {
+  color: #00b87b;
+  font-size: 2rem;  
+  font-weight: bold;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.container .leftfixed .social-icon {
+  padding-top: 0px;
+  
+}
+
+.container .leftfixed .social-icon h1 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.2rem;
+  width: 0ch;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: slide 4s   steps(21) infinite alternate;
+  border-right: 1px solid #eee;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+
+
+@keyframes slide {
+    0%{
+      width: 0ch;
+    }
+
+    50%{
+      width: 21ch;
+    }
+
+}
+
+
+
+
+.container .leftfixed .social-icon span {
+  color: #fff;
+  padding: 10px;
+  font-size: 1rem;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  margin-top: 25px;
+  transition: all 0.3s ease;
+  background-color: #13202d;
+  border: 1px solid #314355;
+}
+
+.container .leftfixed .social-icon span:hover {
+  background-color: #2c3e50;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  cursor: pointer;
+}
+.container .leftfixed .buttons {
+  width: 100%;
+}
+
+.container .leftfixed .buttons .btn {
+  color: #eeeeee;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  background: transparent;
+  width: 49%;
+  transition: all 0.3s ease;
+  border: 1px solid #314355;
+ } 
+
+.container .leftfixed .buttons .btn:hover {
+  background-color: #314355;
+  cursor: pointer;
+
+}
+
+.container .leftfixed .buttons .btn a{
+  color: #eeeeee;
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-decoration: none;
+  }
+
+
+
+
+
+
+
+/*------ left box ends here -------*/
+
+/*------ Right box stars here -------*/
+
+.container .right {
+  width: 80%;
+  margin-left: 26%;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  padding: 0px 50px;
+  position: relative;
+  background-color: #13202d;
+
+}
+
+/* ------------------------- about section starts here ------------------------  */
+
+.container .right .About {
+  width: 100%;
+  padding: 50px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.headings {
+  width: 100%;
+}
+
+.headings h1 { 
+  font-size: 2rem;
+  line-height: 48px;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom:1rem;
+  position: relative;
+}
+
+.headings h1::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom:-8px;
+  width: 100%;
+  max-width: 7px;
+  height: 7px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+}
+
+.headings h1::after{ 
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: -4px;
+  width: 100%;
+  max-width: 80px;
+  height: 2px;
+  background-color: #eee;
+ 
+}
+
+.container .right .About .summary {
+  width: 100%;
+  margin: 2rem 0 0rem 0;
+}
+
+.container .right .About .summary h3{
+  font-size: 1.5rem;
+  font-weight: 700;
+  
+}
+
+.container .right .About .summary h1{
+
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.container .right .About .summary h1 .names{
+  color: #00b87b;
+}
+
+.container .right .About .summary p {
+  font-size: 1rem;
+  line-height: 35px;
+  margin: 25px 0;
+  
+
+}
+
+.container .right .About .summary p .pro{
+  color: #00b87b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container .right .About .summary p  span{
+  color: #00b87b;
+  font-size: 1rem;
+  font-weight: bold ;
+}
+
+.container .right .About .personal-details {
+  width: 100%;
+}
+
+.container .right .About .personal-details .details {
+  width: 50%;
+}
+
+.container .right .About .personal-details .details h1 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 30px;
+  margin-top: 1rem;
+}
+
+.container .right .About .personal-details .details span {
+  color: #00b87b;
+}
+
+.personal-details .details h1  a{
+  color: #eeeeee;
+   text-decoration-color: #eeeeee;
+
+
+}
+
+/* ------------------------- about section ends here ------------------------ */
+
+/* ------------------------- skills section starts here ------------------------ */
+.container .right .Skills {
+  width: 100%;
+  padding: 50px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container .right .Skills .personal-skills {
+  width: 100%;
+}
+
+.container .right .Skills .personal-skills .skill {
+  width: 50%;
+  margin-top: 2.5rem;
+}
+
+.Skills .personal-skills .skill .pro {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.Skills .personal-skills .skill .pro h1 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.Skills .personal-skills .skill .pro .progress-html {
+  width: 95%;
+  border: 4px solid #00b87b;
+  margin-top: 10px;
+}
+
+.Skills .personal-skills .skill .pro .progress-css {
+  width: 95%;
+  border: 4px solid #dc3545;
+  margin-top: 10px;
+}
+
+.Skills .personal-skills .skill .pro .progress-bootstrap {
+  width: 95%;
+  border: 4px solid #7952b3;
+  margin-top: 10px;
+}
+
+.Skills .personal-skills .skill .pro .progress-js {
+  width: 95%;
+  border: 4px solid  #ffc107 ;
+  margin-top: 10px;
+}
+
+.Skills .personal-skills .skill .pro .progress-jq {
+  width: 95%;
+  border: 4px solid #198754;
+  margin-top: 10px;
+}
+
+.Skills .personal-skills .skill .pro .progress-scss {
+  width: 95%;
+  border: 4px solid  #B33771 ;
+  margin-top: 10px;
+}
+
+.Skills .personal-skills .skill .pro .progress-ph{
+  width: 95%;
+  border: 4px solid #0dcaf0 ;
+  margin-top: 10px;
+}
+
+.Skills .personal-skills .skill .pro .progress-git{
+  width: 95%;
+  border: 4px solid #2c3e50 ;
+  margin-top: 10px;
+}
+
+
+/* ------------------------- skills section ends here ------------------------ */
+
+/* ------------------------- Experience section starts here ------------------------ */
+.container .right .Experience {
+  width: 100%;
+  padding: 50px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container .right .Experience .knowledge {
+  width: 100%;
+  padding: 50px 0;
+ 
+}
+
+
+.container .right .Experience .knowledge .ex {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+
+
+.container .right .Experience .knowledge .ex span{
+  width: 1%;
+  color: #00b87b;
+  font-size: 15px;
+  margin-top: 12px;
+  font-weight: bold;
+
+}
+
+.container .right .Experience .knowledge .ex p {
+  font-size: 0.9rem;
+  line-height: 40px;
+  text-align-last: auto;
+  width: 99%;
+  padding-left: 10px;
+
+}
+
+/* 2023  */
+.Experience .knowledge .journey .journey-edu{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+
+
+.Experience .knowledge .journey .journey-edu .jr-headline{
+  padding-left: 1rem;
+}
+
+.Experience .knowledge .journey .journey-edu  .jr-icon i{
+  font-size: 2.1rem;
+  color: #00b87b;
+}
+
+.Experience .knowledge .journey .jr-info{
+  margin-left: 0.9rem;
+  padding-top: 0.5rem;
+  padding-left: 2rem;
+  border-left: 1px solid #eee;
+}
+
+.Experience .knowledge .journey .jr-info p .mentor-links{
+  color: #00b87b;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.Experience .knowledge .journey .jr-info h5{
+  /* padding:0.5rem 0; */
+
+}
+
+/* ------------------------- Experience section ends here ------------------------ */
+
+/* ------------------------- Services section starts here ------------------------ */
+
+.container .right .Services {
+  width: 100%;
+  padding: 50px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+}
+
+.right .Services .service {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2 , 1fr);
+  gap: 20px;
+  justify-items: start;
+  align-items: start;
+}
+
+.right .Services .web {
+  width: 100%;
+  margin:50px 0;
+  text-align: center;
+}
+
+.right .Services  .web .lap-icon {
+  background-color: #eeeeee;
+  color: #00b87b;
+  padding: 10px;
+  font-size: 2.5rem;
+  transition: all .4s ease;
+}
+
+.right .Services .web .lap-icon:hover {
+  background-color: #00b87b;
+  color: #eeeeee;
+  cursor: pointer;
+
+}
+
+.right .Services .service .web h1 {
+  color: #00b87b;
+}
+
+
+.right .Services .service .ser {
+  background-color: #314355;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 25%);
+  transition: all .3s ease;
+  background-color: #13202d;
+  padding: 20px 1%; 
+  overflow: hidden;
+  z-index: 0;
+  border-radius: 5px;
+}
+
+
+.right .Services .service .ser .skill-icon {
+  text-align:center;
+}
+
+.right .Services .service .ser .skill-icon 
+.skill-logo{
+  width: 60px;
+}
+
+.right .Services .service .ser h1 {
+  text-align: center;
+  font-size: 1rem;
+  margin: 20px 0;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.right .Services .service .ser p {
+  font-size: 0.8rem;
+  line-height: 28px;
+    color: #ffff;
+  margin-top: 18px;
+ 
+}
+
+.right .Services .service .ser:hover{
+  background-color: #198754;
+  color: #fff;
+  transform: scale(1.1);
+  z-index: 1;
+  /* text-shadow:2px 2px 5px #000;  */
+}
+
+/* ------------------------- Services section ends here ------------------------ */
+
+/* ------------------------- Portfolio section Starts here ------------------------ */
+
+.container .right .Portfolio {
+  width: 100%;
+  padding: 50px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.right .Portfolio .projects {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.right .Portfolio .projects .mein-box{
+  width: 47.5%;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  margin-bottom: 50px;
+ 
+}
+
+.right .Portfolio .projects .mein-box .web {
+  width: 100%;  
+  position: relative;  
+}
+
+.right .Portfolio .projects .mein-box img {
+  width: 100%;
+  height: 30vh; 
+  display: block; 
+}
+
+.right .Portfolio .projects .mein-box .live-pro{
+  height: 35vh; 
+}
+
+.projects .web .img-overlay{
+  width: 100%;
+  height: 100%;
+  /* background: rgba(0, 0, 0, 0.6); */
+  background: linear-gradient(rgba(8, 12, 24, 0.9), rgba(15, 23, 43, 0.9)); 
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+  backdrop-filter: blur(5px);
+}
+
+ .projects .web .img-overlay:hover{
+  opacity: 1;
+}
+
+.projects .web .img-overlay > *{
+  transform: translateY(20px);
+  transition: transform 0.25s;
+}
+
+.projects .web .img-overlay:hover > *{
+  transform: translateY(0);
+  
+}
+
+.projects .web .img-overlay .box h2{
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+.right .Portfolio .projects  .links-sec{
+  /* background-color: #B33771; */
+  width: 100%;
+  max-width:350px; 
+  margin: 0 auto;
+}
+
+.right .Portfolio .projects .links{
+  width: 100%;
+  max-width: 150px;
+  margin: 20px 0;
+
+ }
+
+.right .Portfolio .projects .links a{
+  font-size: 1rem;
+  font-weight: 400;
+  color: #eee;
+  text-decoration: none; 
+  border: 1px solid #198754; 
+  width:100%; 
+  margin: 0 auto; 
+  text-align: center;
+  display: inline-block;
+  border-radius: 10px; 
+  position: relative;
+  transition: all 0.4s ease;
+  z-index: 999;
+
+} 
+
+
+.right .Portfolio .projects .links a::after{
+  content: "";
+  position: absolute; 
+  top:0;
+  left: 0; 
+  width:0;
+  border-radius: 10px; 
+  height:27px;
+  background-color: #198754;
+  border:none;
+  transition: all 0.4s ease; 
+  color: #eee;
+  z-index:-99;
+ 
+
+}
+
+.right .Portfolio .projects .links a:hover::after{
+  width: 100%;
+  border-radius: 10px;
+  border:none;
+ 
+}
+
+
+
+
+
+
+/* ------------------------- Portfolio section ends here ------------------------ */
+
+/* ------------------------- Contacts  section Starst  here ------------------------ */
+
+.container .right .Contact {
+  width: 100%;
+  padding-top: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.right .Contact form {
+  width: 100%;
+  margin: 25px 0;
+}
+
+.right .Contact form .name_email {
+  width: 100%;
+  margin: 25px 0;
+}
+
+.right .Contact form .name_email .name input:visited {
+  color: #eeeeee;
+}
+
+.right .Contact form .name_email .name,
+.right .Contact form .name_email .email {
+  width: 49.5%;
+}
+
+.right .Contact form .name_email .name input,
+.right .Contact form .name_email .email input {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #314355;
+  outline: none;
+  border: 0;
+  color: #eeeeee;
+  padding-left: 0.8rem;
+  font-size: 0.9rem;
+  background-color: #13202d;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: outline 0.15s ease-in-out;  
+
+}
+
+.right .Contact form .name_email .name input::placeholder,
+.right .Contact form .name_email .email input::placeholder {
+  color: #eeeeee;
+  font-size: 0.9rem;
+  padding-left: -0.8rem;
+ 
+
+
+}
+
+.right .Contact form .name_email .name input:focus,
+.right .Contact form .name_email .email input:focus {
+  outline: 4px solid #198754;
+  color: #eeeeee;
+  border: none;
+  
+ }
+
+ .right .Contact form .subjects{
+  width: 100%;
+  margin: 25px 0;
+ }
+
+ .right .Contact form .subjects  {
+  width: 100%;
+
+}
+
+.right .Contact form .subjects  input {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #314355;
+  outline: none;
+  border: 0;
+  color: #eeeeee;
+  padding-left: 0.8rem;
+  font-size: 0.9rem;
+  background-color: #13202d;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: outline 0.15s ease-in-out;  
+}
+
+.right .Contact form .subjects  input::placeholder{
+  color: #eeeeee;
+  font-size: 0.9rem;
+  padding-left: -0.8rem;
+  transition: ease;
+}
+
+.right .Contact form .subjects input:focus {
+  outline: 4px solid #198754;
+  color: #eeeeee;
+  border: none;
+ }
+
+.right .Contact form .message {
+  width: 100%;
+  margin: 25px 0;
+}
+
+.right .Contact form .message textarea {
+  width: 100%;
+  background-color: #314355;
+  outline: none;
+  border: 0;
+  color: #eeeeee;
+  padding-left: 0.8rem;
+  padding-top: 0.8rem;
+  font-size: 1rem;
+  background-color: #13202d;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 25%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: outline 0.15s ease-in-out;  
+ 
+}
+
+.right .Contact form .message textarea::placeholder {
+  font-size: 0.9rem;
+  color: #eeeeee;
+}
+
+.right .Contact form .message textarea:focus {
+  outline: 4px solid #198754;
+  border: none;
+}
+
+.right .Contact form .btn-section {
+  width: 100%;
+}
+
+.right .Contact form .btn-section button {
+  width: 100%;
+  padding: 0.8rem 0;
+  font-size: 0.9rem;
+  font-family: "Heebo", sans-serif;
+  font-weight: 300;
+  background-color: #00b87b;
+  outline: none;
+  border: 0;
+  color: #eeeeee;
+  transition: all 0.3s ease;
+}
+
+.right .Contact form .btn-section button:hover {
+  background-color: #198754;
+  color: #fff;
+  cursor: pointer;
+}
+
+.right .Contact form .btn-section button:focus {
+  outline: 4px solid #198754;
+}
+
+/* ------------------------- Contacts section ends here ------------------------ */
+
+/*---------------------- footer starts here ----------------*/
+
+.right footer {
+  width: 100%;
+  padding-bottom: 50px;
+  text-align: center;
+  background-color: #13202d;
+}
+
+.right footer span {
+  color: #fff;
+  padding: 10px;
+  font-size: 1rem;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  margin-top: 60px;
+  transition: all 0.3s ease;
+  border: 1px solid #314355;
+}
+
+.right footer span:hover {
+  background-color: #314355;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+  cursor: pointer;
+}
+
+/*---------------------- footer ends here ----------------*/
+
+/*------ right box ends here -------*/
+
+/*---------------------- Media quaries starts here ---------------*/
+
+@media only screen and (max-width: 1250px) {
+  .container .right {
+    margin-left: 30%;
+  }
+
+  .right .Services .service .ser {
+    padding: 15px 2%;
+
+}
+
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 16px;  
+  }
+
+  header nav {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .container .leftfixed {
+    width: 80%;
+    margin: 0 auto;
+    max-width: none;
+    margin-bottom: 25px;
+    position: unset;
+    padding-bottom: 1rem;
+    padding: 10px;
+  }
+
+  .container .leftfixed .img-areas {
+    width: 48.5%;
+     }
+
+  .container .leftfixed .img-areas img {
+    object-fit: cover;
+    width: 65%;
+    border: 5px solid #00b87b;
+    border-radius: 50%;
+    margin:  1.5rem 0;
+  }
+
+  .container .leftfixed .social-icon {
+    width: 48.5%;
+    margin-top: 0px;
+  
+  }
+
+  .container .leftfixed .social-icon figcaption {
+    margin-top: 2.5rem;
+  }
+
+  .container .leftfixed .social-icon h1 {
+   margin-bottom: 3.5rem;
+  }
+
+  .container .leftfixed .buttons .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .container .right {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .right .Services .service .ser p {
+    font-size: 0.9rem;
+    padding: 10px;
+
+}
+
+}
+
+@media only screen and (max-width:992px) {
+  .container .leftfixed .img-areas {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .container .leftfixed .img-areas img {
+    width: 50%;
+  }
+
+  .container .leftfixed .social-icon {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .container .leftfixed .buttons {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 25px;
+  }
+
+  .right .Services .service {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+
+  .right .Services .service .ser p{
+    line-height: 35px;
+    margin-top: -10px;
+  }
+
+  .container .right {
+    padding: 0px 30px;   
+  }
+
+  .right .Portfolio .projects .links {    
+    max-width: 130px;     
+}
+
+
+ 
+ 
+
+
+
+}
+
+
+
+
+
+@media only screen and (max-width:767px){
+
+  header nav ul {
+    display: none;
+    background-color: #198754;
+    position: absolute;
+    top: 54px;
+    left: 0px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    left: -377px;
+    text-align: center;
+    margin-right: 50px;
+    padding: 30vh 0;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+ 
+
+
+    
+  }
+
+  header nav ul li {
+    margin-left: 0;
+  }
+
+  header nav .nav-icon {
+    display: block;
+    font-size: 30px;
+} 
+
+  .container .right .About .personal-details .details {
+    width: 100%;
+  
+  }
+
+  
+  .container .right .Skills .personal-skills .skill {
+    width: 100%;
+    margin-top: 0;
+  
+  }
+
+  .container .right .Skills .personal-skills .s1{
+    margin-top: 2.5rem;
+  }
+
+
+  .right .Services .service .ser {
+    width: 80%;
+    margin: 10px auto;   
+  }
+
+  .right .Portfolio .projects .mein-box{
+    width: 65%;
+    margin: 0 auto;
+    margin-bottom: 35px;
+  }
+
+
+
+  .right .Portfolio .projects .mein-box .web img {
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+
+
+.right .Contact form .name_email {
+  width: 100%;
+  margin: 0;
+}
+
+.right .Contact form .name_email .name, .right .Contact form .name_email .email {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.right .Contact form .subjects{
+  margin: 0px;
+  margin-bottom: 15px;
+}
+
+.right .Contact form .message {
+  width: 100%;
+  margin: 0;
+}
+
+.right .Contact form .message textarea {
+ margin-bottom: 10px;
+
+}
+
+.right .Portfolio .projects .links {
+  max-width: 120px;
+}
+
+.right .Services .service {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+}
+
+
+
+@media only screen and (max-width:575px){
+
+  .container .leftfixed .buttons .btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.right .Services .service .ser {  
+  width: 100%; 
+  
+}
+
+.right .Portfolio .projects .mein-box {
+  width: 100%;
+}
+
+.right .Portfolio .projects .links {
+  /* max-width: 120px; */
+}
+  
+}
+
+
+@media only screen and (max-width:467px) {
+  .container .right {
+    padding: 0px 20px;
+}
+
+.projects .web .img-overlay .box h2 {
+  font-size: 1.5rem;
+}
+
+.projects .web .img-overlay .box h1 {
+  font-size: 1rem;
+}
+
+.right .Portfolio .projects .links {
+  max-width: 105px;
+}
+
+}
+/*---------------------- Media quaries ends here ---------------*/
